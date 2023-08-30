@@ -487,50 +487,7 @@
   
 
   
-  <script src="ableton-script/ableton-script.js">
-    
-
-    async function weatherData(city){
-      try{
-        const responce = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-
-        if(!responce.ok){
-          throw new Error('Not connected');
-        }
-        console.log(responce);
-        const data = await responce.json();
-        console.log(data);
-      }catch(error){
-        console.log('not connected yet');
-      }
-
-    }
-
-    weatherData('india');
-
-    async function graphicData(){
-      try{
-        const responce = await fetch('http://www.7timer.info/bin/api.pl?lon=12.2797&lat=46.7406&product=astro&output=json');
-
-        console.log(responce.url);
-
-        if(!responce.ok){
-          throw new Error('Not connected');
-        }
-        console.log(responce);
-        const data = await responce.json();
-        console.log(data);
-        
-      }catch(error){
-        console.log('not connected yet');
-      }
-    }
-
-    graphicData();
-
-
-    
-  </script>
+  <script src="ableton-script/ableton-script.js"></script>
 
 </body>
 </html>
